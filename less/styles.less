@@ -1,0 +1,138 @@
+// Google Font imports
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+// Color variables
+@primary-shade: #161616;
+@primary-neutral: #FAF8FF;
+@primary-action: #8685EF;
+
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html
+{
+    font-family: sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    background-color: @primary-neutral;
+}
+
+header
+{
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+
+    .logo
+    {
+        padding: 0.5rem 10px 0.5rem 10px;
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 1.25rem;
+        color: @primary-neutral;
+
+        @media (min-width:700px)
+        {
+            font-size: 1.75rem;
+            color: @primary-shade;
+        }
+    }
+}
+
+#landing 
+{
+    @media (min-width:700px)
+    {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .landing_img
+    {
+        background-image: url("../imgs/hero_img_main.jpg");
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        
+        @media (min-width:700px)
+        {
+            height: 100vh;
+            width: 50vw;
+        }
+    }
+
+    .landing_content
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 3rem;
+        color: @primary-neutral;
+        font-family: "EB Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 1.5rem;
+        line-height: normal;
+        
+        @media (min-width:700px)
+        {
+            height: 100vh;
+            width: 50vw;
+            position: relative;
+            padding: 0 5rem;
+            color: @primary-shade;
+            font-size: 2rem;
+        }
+    }
+
+    .l_txt
+    {
+        font-size: 1.25rem;
+
+        @media (min-width:700px)
+        {
+            font-size: 1.75rem;
+        }
+    }
+
+    .action_btn
+    {
+        display: block;
+        width: 70%;
+        margin: 2rem auto;
+        padding: 1rem;
+        background-color: @primary-action;
+        color: @primary-neutral;
+        font-family: "ED Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1rem;
+        text-decoration: none;
+        border: none;
+        border-radius: 15px;
+
+        @media (min-width:700px)
+        {
+            font-size: 1.5rem;
+        }
+    }
+}
