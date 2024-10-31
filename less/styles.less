@@ -1,5 +1,6 @@
 // Google Font imports
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 // Color variables
 @primary-shade: #161616;
@@ -18,7 +19,6 @@ body, html
     font-family: sans-serif;
     font-size: 16px;
     height: 100vh;
-    background-color: @primary-neutral;
 }
 
 header
@@ -98,6 +98,7 @@ header
             width: 50vw;
             position: relative;
             padding: 0 5rem;
+            background-color: @primary-neutral;
             color: @primary-shade;
             font-size: 2rem;
         }
@@ -133,6 +134,64 @@ header
         @media (min-width:700px)
         {
             font-size: 1.5rem;
+        }
+    }
+}
+
+#about
+{
+    background-color: #FDFDFD;
+    text-align: center;
+
+    figure
+    {
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0;
+
+        img
+        {
+            height: 100px;
+            width: 100px;
+            border: 0.5rem @primary-action solid;
+            border-radius: 50%;
+        }
+    }
+
+    h2
+    {
+        padding-bottom: 2rem;
+        font-family: "ED Garamond", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 2rem;
+    }
+
+    article
+    {
+        margin: 1.5rem;
+        padding: 0 1rem 2rem 1rem;
+        line-height: 1.5rem;
+        text-align: left;
+
+        p
+        {
+            padding: 0.75rem 0;
+            font-family: "Lato", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        a
+        {
+            font-family: "ED Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            color: @primary-action;
+            text-decoration: none; 
         }
     }
 }
