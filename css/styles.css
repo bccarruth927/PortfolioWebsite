@@ -360,10 +360,55 @@ header .logo {
   font-style: normal;
 }
 #about article a {
-  font-family: "ED Garamond", serif;
+  font-family: "Lato", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 900;
   font-style: normal;
   color: #8685EF;
   text-decoration: none;
+}
+footer {
+  background: #8685EF;
+  color: #FAF8FF;
+  font-family: "Lato", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+@media (min-width: 700px) {
+  footer {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+footer .socials {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 0.75rem 0;
+}
+@media (min-width: 700px) {
+  footer .socials {
+    width: auto;
+    padding: 1.5rem 1rem 1.5rem 0;
+  }
+}
+footer a {
+  padding: 0 0.5rem;
+  text-decoration: none;
+  color: #FAF8FF;
+}
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 0.75rem 0;
+}
+@media (min-width: 700px) {
+  footer .copyright {
+    width: auto;
+    padding-right: 1rem;
+    align-items: center;
+  }
 }

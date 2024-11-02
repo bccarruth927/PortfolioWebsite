@@ -186,12 +186,65 @@ header
 
         a
         {
-            font-family: "ED Garamond", serif;
+            font-family: "Lato", serif;
             font-optical-sizing: auto;
-            font-weight: 400;
+            font-weight: 900;
             font-style: normal;
             color: @primary-action;
             text-decoration: none; 
+        }
+    }
+}
+
+footer
+{
+    background: @primary-action;
+    color: @primary-neutral;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    @media (min-width:700px)
+    {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .socials
+    {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        padding: 0.75rem 0;
+
+        @media (min-width:700px)
+        {
+            width: auto;
+            padding: 1.5rem 1rem 1.5rem 0;
+        }
+    }
+
+    a
+    {
+        padding: 0 0.5rem;
+        text-decoration: none;
+        color: @primary-neutral;
+    }
+
+    .copyright
+    {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        padding: 0.75rem 0;
+
+        @media (min-width:700px)
+        {
+            width: auto;
+            padding-right: 1rem;
+            align-items: center;
         }
     }
 }
