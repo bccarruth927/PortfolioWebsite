@@ -229,7 +229,7 @@ header {
   width: 100vw;
 }
 header .logo {
-  padding: 0.5rem 10px 0.5rem 10px;
+  padding: 0.75rem 10px 0.5rem 10px;
   font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -239,8 +239,13 @@ header .logo {
 }
 @media (min-width: 700px) {
   header .logo {
-    font-size: 1.75rem;
+    font-size: 1.1rem;
     color: #161616;
+  }
+}
+@media (min-width: 1200px) {
+  header .logo {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 700px) {
@@ -280,8 +285,8 @@ header .logo {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-size: 1.5rem;
-  line-height: normal;
+  font-size: 1.15rem;
+  line-height: 2.25rem;
 }
 @media (min-width: 700px) {
   #landing .landing_content {
@@ -291,35 +296,55 @@ header .logo {
     padding: 0 5rem;
     background-color: #FAF8FF;
     color: #161616;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+@media (min-width: 900px) {
+  #landing .landing_content {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  #landing .landing_content {
     font-size: 2rem;
+    line-height: 3rem;
   }
 }
 #landing .l_txt {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
-@media (min-width: 700px) {
+@media (min-width: 1200px) {
   #landing .l_txt {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 #landing .action_btn {
   display: block;
   width: 70%;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background-color: #8685EF;
   color: #FAF8FF;
   font-family: "ED Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 1.15rem;
   text-decoration: none;
   border: none;
   border-radius: 15px;
 }
 @media (min-width: 700px) {
   #landing .action_btn {
+    margin: 1rem auto;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  #landing .action_btn {
+    margin: 2rem auto;
     font-size: 1.5rem;
   }
 }

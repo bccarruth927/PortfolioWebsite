@@ -7,6 +7,11 @@
 @primary-neutral: #FAF8FF;
 @primary-action: #8685EF;
 
+// Size variables
+@mobile-flipped-samsung: 700px;
+@mobile-flipped-iphone: 900px;
+@tablet-small-laptop: 1200px;
+
 *, ::before, ::after
 {
     margin: 0;
@@ -31,7 +36,7 @@ header
 
     .logo
     {
-        padding: 0.5rem 10px 0.5rem 10px;
+        padding: 0.75rem 10px 0.5rem 10px;
         font-family: "EB Garamond", serif;
         font-optical-sizing: auto;
         font-weight: 800;
@@ -39,17 +44,22 @@ header
         font-size: 1.25rem;
         color: @primary-neutral;
 
-        @media (min-width:700px)
+        @media (min-width:@mobile-flipped-samsung)
         {
-            font-size: 1.75rem;
+            font-size: 1.1rem;
             color: @primary-shade;
+        }
+
+        @media (min-width:@tablet-small-laptop)
+        {
+            font-size: 1.5rem;
         }
     }
 }
 
 #landing 
 {
-    @media (min-width:700px)
+    @media (min-width:@mobile-flipped-samsung)
     {
         display: flex;
         flex-direction: row-reverse;
@@ -64,7 +74,7 @@ header
         background-size: cover;
         position: relative;
         
-        @media (min-width:700px)
+        @media (min-width:@mobile-flipped-samsung)
         {
             height: 100vh;
             width: 50vw;
@@ -89,10 +99,10 @@ header
         font-optical-sizing: auto;
         font-weight: 800;
         font-style: normal;
-        font-size: 1.5rem;
-        line-height: normal;
+        font-size: 1.15rem;
+        line-height: 2.25rem;
         
-        @media (min-width:700px)
+        @media (min-width:@mobile-flipped-samsung)
         {
             height: 100vh;
             width: 50vw;
@@ -100,17 +110,30 @@ header
             padding: 0 5rem;
             background-color: @primary-neutral;
             color: @primary-shade;
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+
+        @media (min-width:@mobile-flipped-iphone)
+        {
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+
+        @media (min-width:@tablet-small-laptop)
+        {
             font-size: 2rem;
+            line-height: 3rem;
         }
     }
 
     .l_txt
     {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
 
-        @media (min-width:700px)
+        @media (min-width:@tablet-small-laptop)
         {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -119,20 +142,27 @@ header
         display: block;
         width: 70%;
         margin: 2rem auto;
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         background-color: @primary-action;
         color: @primary-neutral;
         font-family: "ED Garamond", serif;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
-        font-size: 1rem;
+        font-size: 1.15rem;
         text-decoration: none;
         border: none;
         border-radius: 15px;
 
-        @media (min-width:700px)
+        @media (min-width:@mobile-flipped-samsung)
         {
+            margin: 1rem auto;
+            font-size: 1rem;
+        }
+
+        @media (min-width:@tablet-small-laptop)
+        {
+            margin: 2rem auto;
             font-size: 1.5rem;
         }
     }
@@ -205,7 +235,7 @@ footer
     font-weight: 400;
     font-style: normal;
 
-    @media (min-width:700px)
+    @media (min-width:@mobile-flipped-samsung)
     {
         width: 100vw;
         display: flex;
@@ -219,7 +249,7 @@ footer
         width: 100vw;
         padding: 0.75rem 0;
 
-        @media (min-width:700px)
+        @media (min-width:@mobile-flipped-samsung)
         {
             width: auto;
             padding: 1.5rem 1rem 1.5rem 0;
@@ -240,7 +270,7 @@ footer
         width: 100vw;
         padding: 0.75rem 0;
 
-        @media (min-width:700px)
+        @media (min-width:@mobile-flipped-samsung)
         {
             width: auto;
             padding-right: 1rem;
