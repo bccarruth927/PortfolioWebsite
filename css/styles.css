@@ -222,39 +222,65 @@ html {
   height: 100vh;
 }
 header {
+  display: flex;
+  flex-direction: row;
   background-color: transparent;
   position: absolute;
   top: 0;
   z-index: 1;
   width: 100vw;
 }
+header figure {
+  height: 45px;
+  width: 45px;
+  padding-top: 0.5rem;
+  padding-left: 10px;
+}
+header figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (orientation: landscape) and (min-width: 700px) {
+  header figure {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 1000px) {
+  header figure {
+    height: 45px;
+    width: 45px;
+  }
+}
 header .logo {
-  padding: 0.75rem 10px 0.5rem 10px;
   font-family: "EB Garamond", serif;
+  padding: 0.75rem 10px 0.5rem 10px;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
   font-size: 1.25rem;
   color: #FAF8FF;
 }
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   header .logo {
     padding: 0.5rem 10px;
-    font-size: 1.1rem;
+    font-size: 1.75rem;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 700px) {
+  header .logo {
+    padding: 0.5rem 10px;
+    font-size: 1.25rem;
     color: #161616;
   }
 }
-@media (min-width: 900px) {
+@media screen and (orientation: landscape) and (min-width: 1000px) {
   header .logo {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
   }
 }
-@media (min-width: 1200px) {
-  header .logo {
-    font-size: 1.5rem;
-  }
-}
-@media (min-width: 700px) {
+@media screen and (orientation: landscape) and (min-width: 700px) {
   #landing {
     display: flex;
     flex-direction: row-reverse;
@@ -268,7 +294,7 @@ header .logo {
   background-size: cover;
   position: relative;
 }
-@media (min-width: 700px) {
+@media screen and (orientation: landscape) and (min-width: 700px) {
   #landing .landing_img {
     height: 100vh;
     width: 45vw;
@@ -279,14 +305,18 @@ header .logo {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0 3rem;
 }
-@media (min-width: 700px) {
+@media screen and (orientation: portrait) {
+  #landing .landing_content {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 3rem;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 700px) {
   #landing .landing_content {
     justify-content: flex-start;
     height: 100vh;
@@ -297,7 +327,7 @@ header .logo {
     background-color: #FAF8FF;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (orientation: landscape) and (min-width: 1000px) {
   #landing .landing_content {
     padding-left: 2rem;
   }
@@ -309,127 +339,81 @@ header .logo {
   font-weight: 800;
   font-style: normal;
   font-size: 1.5rem;
-  line-height: 2.25rem;
+  line-height: normal;
 }
-@media (min-width: 700px) {
+@media screen and (orientation: portrait) and (min-width: 700px) {
+  #landing h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 1000px) {
+  #landing h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 700px) {
   #landing h1 {
     color: #161616;
-    font-size: 1.35rem;
-    line-height: 1.6rem;
   }
 }
-@media (min-width: 900px) {
+@media screen and (orientation: landscape) and (min-width: 1000px) {
   #landing h1 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-@media (min-width: 1200px) {
-  #landing h1 {
-    font-size: 2.25rem;
-    line-height: 3rem;
+    font-size: 2.5rem;
   }
 }
 #landing .l_txt {
   font-size: 1.15rem;
 }
-@media (min-width: 700px) {
+@media screen and (orientation: portrait) and (min-width: 700px) {
   #landing .l_txt {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
-@media (min-width: 900px) {
+@media screen and (orientation: landscape) and (min-width: 900px) {
   #landing .l_txt {
     font-size: 1.25rem;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (orientation: landscape) and (min-width: 1000px) {
   #landing .l_txt {
     font-size: 1.75rem;
   }
 }
 #landing .action_btn {
   display: block;
-  width: 70%;
-  margin: 2rem auto;
-  padding: 0.5rem 1rem;
   background-color: #8685EF;
   color: #FAF8FF;
   font-family: "ED Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.15rem;
   text-decoration: none;
-  border: none;
-  border-radius: 15px;
+  width: 70%;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.15rem;
 }
-@media (min-width: 700px) {
+@media screen and (orientation: landscape) and (min-width: 700px) {
   #landing .action_btn {
     width: 50%;
     margin: 1rem 0;
     padding: 0.5rem 0;
     text-align: center;
     font-size: 1rem;
-    border: 2px #161616 solid;
-    border-radius: 0px;
+    box-shadow: 5px 5px #161616;
   }
 }
-@media (min-width: 900px) {
+@media screen and (orientation: landscape) and (min-width: 900px) {
   #landing .action_btn {
     margin: 1.25rem 0;
     font-size: 1.15rem;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (orientation: landscape) and (min-width: 1000px) {
   #landing .action_btn {
     margin: 2rem 0;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
-}
-#about {
-  background-color: #FDFDFD;
-  text-align: center;
-}
-#about figure {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 0;
-}
-#about figure img {
-  height: 100px;
-  width: 100px;
-  border: 0.5rem #8685EF solid;
-  border-radius: 50%;
-}
-#about h2 {
-  padding-bottom: 2rem;
-  font-family: "ED Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2rem;
-}
-#about article {
-  margin: 1.5rem;
-  padding: 0 1rem 2rem 1rem;
-  line-height: 1.5rem;
-  text-align: left;
-}
-#about article p {
-  padding: 0.75rem 0;
-  font-family: "Lato", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-#about article a {
-  font-family: "Lato", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  color: #8685EF;
-  text-decoration: none;
 }
 footer {
   background: #8685EF;
